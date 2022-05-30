@@ -13,7 +13,8 @@ class GetUserListRepositoryImpl extends GetUserListRepository {
   @override
   Future<List<User>> getUserList() async {
     try {
-      await Future.delayed(Duration(seconds: 2));
+      // Uncomment when you want to try seeing the loading indicator
+      // await Future.delayed(const Duration(seconds: 2));
 
       final response = await userServices.getUserList();
 
